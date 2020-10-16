@@ -9,21 +9,14 @@ pat2="^[a-zA-Z][a-zA-Z0-9_\-+]*[.]{0,1}[a-zA-Z0-9_\-+]{1,}[@][a-zA-Z0-9]{1,}[.][
 patMobileNumber="^[+]{1}[0-9]{2}[ ][0-9]{10}"
 patPassword1="^[a-zA-Z0-9]{8,}$"
 patPassword2="^(?=.*[A-Z])[a-zA-Z\d]{8,}$"
-<<<<<<< HEAD
 patPassword3="^(?=.*[A-Z])(?=.*?[0-9])[a-zA-Z\d]{8,}$"
+patpassword4="^(?=.*?[A-Z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$"
 
 read -p "Enter valid password" password
 
-if [[ $password =~ $patPassword3 ]]
+if [[ $password =~ $patPassword4 ]]
 then
-	echo "valid Password according to rule 3"
-=======
-read -p "Enter valid password" password
-
-if [[ $password =~ $patPassword2 ]]
-then
-	echo "valid Password according to rule 2"
->>>>>>> uc6-validpasswordrule2
+	echo "valid Password according to rule 4"
 else
 	echo "invalid"
 fi
